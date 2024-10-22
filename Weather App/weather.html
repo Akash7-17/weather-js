@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-container">
+      <input type="text" id="cityInput" class="cityInput" placeholder="Search city">
+      <div class="search-icon" id="searchButton">
+        <img src="images/search.png" alt="search">
+      </div>
+    </div>
+    
+    <div id="weatherDetails">
+      <div class='image'>
+        <img id="weatherIcon" src="images/snow.png" alt="weather-icon">
+      </div>
+      <div id="temp" class='temp'>0°C</div>
+      <div id="location" class='location'>City</div>
+      <div id="country" class='country'>Country</div>
+      <div class='cord'>
+        <div>
+          <span class="lat">Latitude: </span>
+          <span id="lat">0</span>
+        </div>
+        <div>
+          <span class="lat">Longitude: </span>
+          <span id="log">0</span>
+        </div>
+      </div>
+      <div class='data-container'>
+        <div class='element'>
+          <img src="images/humidity.png" alt="humidity" class='icon'>
+          <div class='data'>
+            <div id="humidity" class='humidity-percent'>0%</div>
+            <div class='text'>Humidity</div>
+          </div>
+        </div>
+        <div class='element'>
+          <img src="images/wind.png" alt="wind" class='icon'>
+          <div class='data'>
+            <div id="wind" class='wind-percent'>0 km/h</div>
+            <div class='text'>Wind speed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loadingMessage" class="loading-message" style="display: none;">Loading...</div>
+    <div id="errorMessage" class="error-message" style="display: none;">City not found</div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
